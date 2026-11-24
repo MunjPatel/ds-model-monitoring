@@ -1,0 +1,41 @@
+{
+  "n_train": 18407,
+  "n_serve": 11593,
+  "train_vintages": "0-11",
+  "serve_vintages": "12-17",
+  "n_features": 15,
+  "features": [
+    "limit_bal",
+    "age",
+    "education",
+    "marriage",
+    "pay_1",
+    "pay_2",
+    "pay_3",
+    "bill_amt1",
+    "pay_amt1",
+    "utilization",
+    "n_late",
+    "max_delinquency",
+    "pay_to_bill",
+    "avg_bill",
+    "avg_pay"
+  ],
+  "ref_month": 12,
+  "injected_drift_month": 17,
+  "n_alerts_on_injected_drift": 1,
+  "note": "Vintages are synthetic on UCI data for offline walk-forward monitoring demo.",
+  "sources": [
+    "Uber Engineering (2017): Meet Michelangelo",
+    "Uber Engineering (2019): Scaling Michelangelo",
+    "Two Sigma (2025): Treating Data as Code"
+  ],
+  "title": "Injected utilization / n_late drift on final serve month",
+  "michelangelo_pattern": "Log predictions, join outcomes, monitor feature & prediction distributions (Uber Engineering).",
+  "launch_auc": 0.7983504764525784,
+  "latest_auc": 0.7894809362903671,
+  "injected_score_psi": 0.031912318445307904,
+  "n_alerts": 1,
+  "critical_alerts": 1,
+  "action": "Page model owner; freeze auto-approvals if score PSI FAIL; retrain or recalibrate."
+}

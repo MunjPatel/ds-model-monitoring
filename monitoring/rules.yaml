@@ -1,0 +1,8 @@
+# Model health alert policy (demo)
+feature_psi_warn: 0.10
+feature_psi_fail: 0.25
+score_psi_fail: 0.20
+brier_worsen_pct: 0.15
+description: >
+  Inspired by Uber Michelangelo production monitoring:
+  log predictions, join outcomes, watch feature/prediction distributions.
